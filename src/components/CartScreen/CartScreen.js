@@ -27,12 +27,14 @@ export const CartScreen = () => {
                         {
                             carrito.map( (prod) => (
                                 <div>
+                                    <hr/>
                                     <h4>{prod.name}</h4>
                                     <p>Unidades: {prod.cantidad}</p>
                                     <p>Precio: {prod.price * prod.cantidad}</p>
                                     <button className="btn btn-danger" onClick={() => removeItem(prod.id)}>
                                         <BsFillTrashFill/>
                                     </button>
+                                    <hr/>
                                 </div>
                             ))
                         }
