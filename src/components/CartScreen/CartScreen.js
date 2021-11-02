@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import { BsFillTrashFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
+import { useHistory } from 'react-router'
 
 export const CartScreen = () => {
-
+    const {goBack, push} = useHistory()
     const {carrito, vaciarCarrito, removeItem, calcularTotal} = useContext(CartContext)
 
 
@@ -38,6 +39,12 @@ export const CartScreen = () => {
 
                         <hr/>
                         <h3 className="my-3">Total: ${calcularTotal()}</h3>
+                        <button 
+                        className="btn btn-outline-primary mx-4"
+                        onClick={() => push("/")}
+                        >
+                        Seguir Comprando
+                        </button> {/*vuelve al inicio*/}
                         <button
                             className="btn btn-danger"
                             onClick={vaciarCarrito}
