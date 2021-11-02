@@ -28,14 +28,39 @@ export const CartScreen = () => {
                             carrito.map( (prod) => (
                                 <div>
                                     <hr/>
-                                    <h4>{prod.name}</h4>
-                                    <p>Unidades: {prod.cantidad}</p>
-                                    <p>Precio: {prod.price * prod.cantidad}</p>
-                                    <button className="btn btn-danger" onClick={() => removeItem(prod.id)}>
+                                    <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Código</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Quitar de lista</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr >
+                    <td ><h4>{prod.name}</h4></td>
+                    <td><h4>{prod.cantidad}</h4></td>
+                    <td><h4>{prod.price}</h4></td>
+                    <td><h4>{prod.cantidad}</h4></td>
+                    <td><h4>{prod.price * prod.cantidad}</h4></td>
+                    <td>
+                        <form >
+                        <button className="btn btn-danger" onClick={() => removeItem(prod.id)}>
                                         <BsFillTrashFill/>
                                     </button>
-                                    <hr/>
-                                </div>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        
+         <hr/>
+        </div>
                             ))
                         }
 
