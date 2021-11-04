@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
@@ -16,7 +17,7 @@ export const NavBar = ( {logo} ) => {
     const handlesubmit = () => {
         setIsAuthenticated(false);
         vaciarCarrito();
-    
+
     }
     return (
         <header className="header" >
@@ -27,17 +28,16 @@ export const NavBar = ( {logo} ) => {
             <div>
                 <nav >
                     <NavLink activeClassName={'activeLink'} exact to="/">Inicio</NavLink>
-                    <NavLink activeClassName={'activeLink'} exact to="/productos/remeras">Tecnologia</NavLink>
-                    <NavLink activeClassName={'activeLink'} exact to="/productos/zapatos">Accesorios</NavLink>
+                    <NavLink activeClassName={'activeLink'} exact to="/productos/tecnologia">Tecnologia</NavLink>
+                    <NavLink activeClassName={'activeLink'} exact to="/productos/accesorios">Accesorios</NavLink>
 
-                    <NavLink activeClassName={'activeLink'} exact to="/contacto">Historial</NavLink>
+                    <NavLink activeClassName={'activeLink'} exact to="/historial">Historial</NavLink>
 
                     <Link to="/cart"><CartWidget/></Link>
                     { !isAuthenticated || <button className="botonSalir" onClick={handlesubmit}> Salir</button> }
-                    
+
                 </nav>
             </div>
         </header>
     )
 }
-

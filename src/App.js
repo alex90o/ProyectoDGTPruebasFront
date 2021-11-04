@@ -15,6 +15,7 @@ import { UserAuthContext } from './context/UserAuthContext';
 import { useContext } from 'react';
 import { UserAuthenticate } from './components/UserAuthenticate/UserAuthenticate';
 import { Clock } from './ejemplos/Clock/Clock';
+import Historial from './components/Historial/Historial';
 
 
 
@@ -49,8 +50,8 @@ function App() {
                   <ItemDetailContainer />
               </Route>
 
-              <Route exact path="/contacto">
-                  <h1>Contacto</h1>
+              <Route exact path="/historial">
+                  <Historial />
               </Route>
 
               <Route exact path="/cart">
