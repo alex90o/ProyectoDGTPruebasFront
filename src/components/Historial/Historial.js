@@ -1,11 +1,23 @@
 
 import React from 'react'
+import { useHistory } from 'react-router'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Historial( ){
+    const {goBack, push} = useHistory()
     return (
-        <div>
+        <div className="container">
+        <div className="row">    
         <div class="col-12">
-        <h1>Compras Realizadas</h1>
+        <div>
+        <h1 class="col-6">Compras Realizadas</h1>
+       
+        <button
+                        className="btn btn-outline-primary mx-4"
+                        onClick={()=>push("/")}
+                        >Seguir Comprando
+        </button> {/*vuelve al inicio*/}
+        </div>
         <h2>Cliente: Nombre</h2>
             <div  class="alert">
             </div>
@@ -18,6 +30,7 @@ export default function Historial( ){
                         <th>Fecha</th>
                         <th>Productos</th>
                         <th>Total</th>
+                        <th>Detalle de Compra</th>
                         
                     </tr>
                     </thead>
@@ -54,6 +67,7 @@ export default function Historial( ){
                 </table>
             </div>
         </div>
+    </div>
     </div>
    
     )
