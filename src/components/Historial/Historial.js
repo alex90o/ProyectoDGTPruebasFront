@@ -17,6 +17,12 @@ export default function Historial( ){
                         onClick={()=>push("/")}
                         >Seguir Comprando
         </button> {/*vuelve al inicio*/}
+        <button
+                            className="btn btn-danger"
+                            onClick={()=>push("/")}
+                        >
+                            Eliminar Historial
+        </button> {/*solo ejemplo no hace nada por ahora --- va a inicio para que no de error*/}
         </div>
         <h2>Cliente: Nombre</h2>
             <div  class="alert">

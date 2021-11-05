@@ -20,6 +20,7 @@ export const NavBar = ( {logo} ) => {
 
     }
     return (
+        <div className="container">
         <header className="header" >
            {//<img src={logo2} className="logo2" align="center"></img>//
            }
@@ -39,5 +40,6 @@ export const NavBar = ( {logo} ) => {
                 </nav>
             </div>
         </header>
+        </div>
     )
 }
