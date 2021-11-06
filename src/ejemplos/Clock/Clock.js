@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import './Clock.css'
 
 export const Clock = () => {
 
@@ -26,7 +26,7 @@ export const Clock = () => {
 
     return (
         <div className="container">
-            <h3>{time.toLocaleString()}</h3>
+            <h3 className="clock  col-2">{time.toLocaleString()}</h3>
         </div>
     )
 }
