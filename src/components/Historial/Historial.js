@@ -57,7 +57,7 @@ export default function Historial( ){
                                     <th>Cantidad</th>
                                     <th>Precio</th>
                                     <th>Total</th>
-                                    <th>Ver Detalle</th>
+                               
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -67,12 +67,6 @@ export default function Historial( ){
                                     <td><h4>prod.cantidad</h4></td>
                                     <td><h4>prod.precio</h4></td>
                                     <td><h4>prod.total</h4></td>
-                                    <td class="col-3">
-                                         <Link to={"/cart"}>
-                                         <Button variant="primary">Ver</Button>
-                                         </Link>
-   
-                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
